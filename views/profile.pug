@@ -1,0 +1,13 @@
+extends layout
+
+block main
+	if user
+		.centred
+			img.round(src="#{user.picture}", width="200") 
+			p= user.displayName
+			p= user.email
+			p= user.user_id
+			p= user.app_metadata.customerId
+			if user.app_metadata.roles
+				each role in user.app_metadata.roles
+					p= role
