@@ -2,10 +2,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const schema = new Schema({
-	userId: String,
+	email: String,
 	displayName: String,
-	picture: String,
-	email: String
+	picture: String
 }, { collection: 'users' });
 
 schema.statics.findById = function(id) {

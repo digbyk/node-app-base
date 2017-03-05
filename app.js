@@ -16,7 +16,7 @@ const session = require('express-session');
 const RedisStore = require('connect-redis')(session);
 
 const passport = require('passport');
-const strategy = require('./lib/auth0');
+const strategy = require('./lib/auth0-strategy');
 
 passport.use(strategy);
 
