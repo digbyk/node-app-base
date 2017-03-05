@@ -5,6 +5,8 @@ const logger = require('../lib/logging.js');
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
+const User = require('./user.js');
+
 mongoose.connect(url, {
 	server: {
 		auto_reconnect: true
@@ -34,3 +36,5 @@ process.on('SIGINT', function() {
 		process.exit(0);
 	});
 });
+
+module.exports = { Mongoose: mongoose, User: User };
